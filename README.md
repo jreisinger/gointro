@@ -15,10 +15,9 @@ Why security engineer should program
 
 Why Go
 
-* compiled, strongly typed
-* easier to write and maintain correct code
-* Kubernetes + lot of cloud tooling written in Go
-* nice addition to Bash and Python
+* focus on simplicity and correctness
+* lot of cloud written in Go (e.g. Kubernetes)
+* compiled, strongly typed -> nice addition to Bash and Python
 
 Go peculiarities
 
