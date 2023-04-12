@@ -25,7 +25,7 @@ Go peculiarities
 * packages
 * concurrency (goroutines, channels)
 * interfaces
-* cross-compilation to a single binary
+* cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build fetch.go`
 
 Learn more
 
