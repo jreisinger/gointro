@@ -2,24 +2,28 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"net/http"
 	"os"
 	"time"
 
-	"github.com/jreisinger/gointro/count"
+	"github.com/jreisinger/gointro/byte"
 )
+
+var counter byte.Counter
 
 func main() {
 	urls := os.Args[1:]
 	start := time.Now()
 	ch := make(chan string)
 	for _, url := range urls {
-		go fetch(url, ch)
+		go fetch(url, ch) // start a goroutine
 	}
 	for range urls {
-		fmt.Println(<-ch)
+		fmt.Println(<-ch) // receive from channel
 	}
-	fmt.Printf("%5.3f elapsed\n", time.Since(start).Seconds())
+	fmt.Printf("----- -------\n")
+	fmt.Printf("%5.3f %7d\n", time.Since(start).Seconds(), counter)
 }
 
 func fetch(url string, ch chan string) {
@@ -30,9 +34,10 @@ func fetch(url string, ch chan string) {
 		return
 	}
 	defer resp.Body.Close()
-	n, err := count.Bytes(resp.Body)
+	n, err := io.Copy(&counter, resp.Body)
 	if err != nil {
 		ch <- fmt.Sprint(err)
+		return
 	}
-	ch <- fmt.Sprintf("%5.3f %5d %s", time.Since(start).Seconds(), n, url)
+	ch <- fmt.Sprintf("%5.3f %7d %s", time.Since(start).Seconds(), n, url)
 }
