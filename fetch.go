@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 	"os"
 	"time"
 
-	"github.com/jreisinger/gosec/count"
+	"github.com/jreisinger/gointro/count"
 )
 
 func main() {
@@ -27,13 +26,13 @@ func fetch(url string, ch chan string) {
 	start := time.Now()
 	resp, err := http.Get(url)
 	if err != nil {
-		log.Print(err)
+		ch <- fmt.Sprint(err)
 		return
 	}
 	defer resp.Body.Close()
 	n, err := count.Bytes(resp.Body)
 	if err != nil {
-		log.Print(err)
+		ch <- fmt.Sprint(err)
 	}
 	ch <- fmt.Sprintf("%5.3f %5d %s", time.Since(start).Seconds(), n, url)
 }
