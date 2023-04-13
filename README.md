@@ -15,7 +15,7 @@ Why Go
 
 Go peculiarities
 
-* types, interfaces, pointers (`bytecounter`)
+* packages, types, interfaces, pointers, methods (`bytecounter`)
 * concurrency via goroutines and channels (`fetch`)
 * cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build fetch.go`
 
