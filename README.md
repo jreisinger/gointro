@@ -1,12 +1,6 @@
 Go intro for sec and ops people
 -------------------------------
 
-About me
-
-* working in IT since 2004
-* IT auditor, system administrator, security engineering
-* more: https://jreisinger.github.io/cv
-
 Why sec and ops people should program
 
 * to better understand how software works
@@ -15,9 +9,9 @@ Why sec and ops people should program
 
 Why Go
 
-* focus on simplicity and correctness
+* focus on simplicity, reliability (correctness) and speed
 * lot of cloud is written in Go (e.g. Kubernetes)
-* compiled, strongly typed -> nice addition to Bash and Python
+* nice addition to Bash and Python since it's compiled and peculiar
 
 Go peculiarities
 
