@@ -6,11 +6,7 @@ import (
 	"net/http"
 	"os"
 	"time"
-
-	"github.com/jreisinger/gointro/byte"
 )
-
-var counter byte.Counter
 
 func main() {
 	urls := os.Args[1:]
@@ -22,8 +18,7 @@ func main() {
 	for range urls {
 		fmt.Println(<-ch) // receive from channel
 	}
-	fmt.Printf("----- -------\n")
-	fmt.Printf("%5.3f %7d\n", time.Since(start).Seconds(), counter)
+	fmt.Printf("%5.3f elapsed\n", time.Since(start).Seconds())
 }
 
 func fetch(url string, ch chan string) {
@@ -34,7 +29,7 @@ func fetch(url string, ch chan string) {
 		return
 	}
 	defer resp.Body.Close()
-	n, err := io.Copy(&counter, resp.Body)
+	n, err := io.Copy(io.Discard, resp.Body)
 	if err != nil {
 		ch <- fmt.Sprint(err)
 		return
