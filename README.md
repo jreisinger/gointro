@@ -16,7 +16,7 @@ Why Go
 Go peculiarities
 
 * types, goroutines and channels, packages: `fetch`
-* cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build fetch/cmd/fetch.go`
+* cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build cmd/fetch.go`
 
 Learn more
 
