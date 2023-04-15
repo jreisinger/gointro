@@ -11,13 +11,13 @@ Why Go
 
 * focus on simplicity, reliability (correctness) and speed
 * lot of cloud is written in Go (e.g. Kubernetes)
-* nice addition to Bash and Python since it's compiled and peculiar
+* nice addition to Bash and Python since it's quite different
 
 Go peculiarities
 
 * packages, types, goroutines and channels: `fetch`
 * interfaces, pointers, methods: `bytecounter`
-* cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build fetch.go`
+* cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build fetch/cmd/fetch.go`
 
 Learn more
 
