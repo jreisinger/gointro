@@ -15,8 +15,7 @@ Why Go
 
 Go peculiarities
 
-* packages, types, goroutines and channels: `fetch`
-* interfaces, pointers, methods: `bytecounter`
+* types, goroutines and channels, packages: `fetch`
 * cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build fetch/cmd/fetch.go`
 
 Learn more
