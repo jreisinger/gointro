@@ -1,24 +1,14 @@
-package main
+// Package fetch works with HTTP resources.
+package fetch
 
 import (
 	"fmt"
 	"io"
 	"net/http"
-	"os"
 )
 
-func main() {
-	urls := os.Args[1:]
-	ch := make(chan string)
-	for _, url := range urls {
-		go fetch(url, ch) // start a goroutine
-	}
-	for range urls {
-		fmt.Println(<-ch) // receive from channel
-	}
-}
-
-func fetch(url string, ch chan string) {
+// Fetch gets the resource at url and sends its size in bytes on ch.
+func Fetch(url string, ch chan string) {
 	resp, err := http.Get(url)
 	if err != nil {
 		ch <- fmt.Sprint(err)
