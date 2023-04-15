@@ -21,5 +21,5 @@ func Fetch(url string, ch chan string) {
 		ch <- fmt.Sprint(err)
 		return
 	}
-	ch <- fmt.Sprintf("%-7d %s", nbytes, url)
+	ch <- fmt.Sprintf("%7d %s", nbytes, url)
 }
