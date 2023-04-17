@@ -15,10 +15,10 @@ Why Go
 
 Go peculiarities
 
-* types, goroutines and channels, packages: `cd fetch`
+* types, goroutines, channels, packages: `cd fetch`
 * cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build cmd/fetch.go`
-* network server, interfaces: `cd shop`
-* small images: `docker build -t shop .`
+* network servers, interfaces: `cd shop`
+* small and secure images: `docker build -t shop .`
 
 Learn more
 

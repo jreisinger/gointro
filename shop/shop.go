@@ -12,7 +12,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8000", db))
 }
 
-type database map[string]dollars
+type database map[string]euro
 
 func (db database) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	for item, price := range db {
@@ -20,6 +20,8 @@ func (db database) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-type dollars float32
+type euro float32
 
-func (d dollars) String() string { return fmt.Sprintf("$%.2f", d) }
+func (e euro) String() string {
+	return fmt.Sprintf("€%.1f", e)
+}
