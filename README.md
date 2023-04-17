@@ -1,6 +1,13 @@
 Go intro for sec and ops people
 -------------------------------
 
+Why intro for sec and ops people
+
+* since 2013 I've worked as sysadmin, devops/security person
+* since 2008 I've been using Go (together with some Bash and Perl/Python)
+* mostly small/medium sized one/two-person programs
+* more about me: https://jreisinger.github.io/cv
+
 Why sec and ops people should program
 
 * to better understand how software works
@@ -22,7 +29,6 @@ Go peculiarities
 
 Learn more
 
-* online: https://go.dev/tour, https://gobyexample.com/, https://go.dev/doc
 * books: Learning Go, The Go Programming Language, Black Hat Go
-* write tools, automation, PoCs
+* online: https://go.dev/tour, https://gobyexample.com/, https://go.dev/doc
 * https://github.com/jreisinger/gokatas
