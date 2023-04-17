@@ -22,13 +22,12 @@ Why Go
 
 Go peculiarities
 
-* types, goroutines, channels, packages: `cd fetch`
-* cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build cmd/fetch.go`
-* network servers, interfaces: `cd shop`
+* packages, types, goroutines, channels: `cd fetch`
+* cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build fetch.go`
+* interfaces: `cd shop`
 * small and secure images: `docker build -t shop .`
 
 Learn more
 
 * books: Learning Go, The Go Programming Language, Black Hat Go
 * online: https://go.dev/tour, https://gobyexample.com/, https://go.dev/doc
-* https://github.com/jreisinger/gokatas
