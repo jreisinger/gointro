@@ -23,10 +23,11 @@ Go peculiarities
 
 * packages, types, goroutines, channels: `cd fetch`
 * cross-compilation to a single binary: `GOOS=linux GOARCH=arm64 go build fetch.go`
-* interfaces: `cd shop`
-* small and secure images: `docker build -t shop .`
+* methods and interfaces: `cd shop`
+* small and secure images: `docker build -t shop . && docker run -p 8000:8000 shop`
 
 Learn more
 
 * books: Learning Go, The Go Programming Language, Black Hat Go
 * online: https://go.dev/tour, https://gobyexample.com/, https://go.dev/doc
+* https://github.com/jreisinger/gokatas

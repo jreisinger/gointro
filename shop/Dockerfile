@@ -1,6 +1,6 @@
 FROM golang:1.20 as build
 WORKDIR /shop
-COPY . .
+COPY shop.go .
 RUN CGO_ENABLED=0 go build -o /bin/shop shop.go
 
 FROM gcr.io/distroless/static-debian11

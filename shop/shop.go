@@ -1,4 +1,4 @@
-// Shop - simple e-shop showing price of shoes and socks
+// Shop is a simple e-shop showing price of shoes and socks.
 package main
 
 import (
@@ -23,5 +23,5 @@ func (db database) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 type euro float32
 
 func (e euro) String() string {
-	return fmt.Sprintf("€%.1f", e)
+	return fmt.Sprintf("€%.2f", e)
 }
