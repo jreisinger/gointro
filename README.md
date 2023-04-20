@@ -28,6 +28,6 @@ Go peculiarities
 
 Learn more
 
-* books: Learning Go, The Go Programming Language, Black Hat Go
 * online: https://go.dev/tour, https://gobyexample.com/, https://go.dev/doc
-* https://github.com/jreisinger/gokatas
+* books: Learning Go, The Go Programming Language, Black Hat Go
+* practice: https://github.com/jreisinger/gokatas
