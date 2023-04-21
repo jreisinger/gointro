@@ -4,7 +4,7 @@ Go intro for sec and ops people
 Why intro for sec and ops people
 
 * since 2013 I've worked as sysadmin, devops/security person
-* since 2008 I've been using Go (together with some Bash and Perl/Python)
+* since 2018 I've been using Go (together with some Bash and Perl/Python)
 * mostly small/medium sized one/two-person programs
 
 Why sec and ops people should program
